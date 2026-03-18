@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Fundo da página */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        /* Container principal */
+        body > div, body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Caixa do app */
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            width: 320px;
+        }
+
+        /* Título */
+        h1 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Input */
+        input {
+            width: 70%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 5px rgba(79,172,254,0.5);
+        }
+
+        /* Botão Add */
+        button {
+            padding: 10px 14px;
+            border: none;
+            border-radius: 8px;
+            background: #4facfe;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #3a8de0;
+        }
+
+        /* Lista */
+        div {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        /* Itens */
+        li {
+            list-style: none;
+            background: #f5f7fa;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Botão delete */
+        li button {
+            background: #ff6b6b;
+            padding: 6px 10px;
+            font-size: 12px;
+        }
+
+        li button:hover {
+            background: #e05555;
+        }
+
+        /* Animação */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To do list</h1>
+        <input type="text"><br>
+        <button>Add</button>
+        <div></div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
